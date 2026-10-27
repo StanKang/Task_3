@@ -61,11 +61,6 @@ public class MainPage extends BasePage {
         click(loginButton);
     }
 
-    @Step("Проверить, что на главной есть кнопка «Войти в аккаунт»")
-    public boolean isLoginButtonDisplayed() {
-        return isDisplayed(loginButton);
-    }
-
     @Step("Проверить, что на главной есть кнопка «Оформить заказ» (пользователь авторизован)")
     public boolean isMakeOrderButtonDisplayed() {
         return isDisplayed(makeOrderButton);

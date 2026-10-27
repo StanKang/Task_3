@@ -24,7 +24,6 @@ public abstract class BasePage {
 
     // Шапка приложения
     private final By constructorLink = By.xpath("//header//a[@href='/'][normalize-space()='Конструктор']");
-    private final By feedLink = By.xpath("//header//a[@href='/feed']");
     private final By accountLink = By.xpath("//header//a[@href='/account']");
     // Логотип - ссылка на главную без текста (внутри только svg)
     private final By logoLink = By.xpath("//header//a[@href='/' and not(normalize-space())]");
@@ -37,11 +36,6 @@ public abstract class BasePage {
     @Step("Кликнуть по ссылке «Конструктор» в шапке")
     public void clickConstructorLink() {
         click(constructorLink);
-    }
-
-    @Step("Кликнуть по ссылке «Лента Заказов» в шапке")
-    public void clickFeedLink() {
-        click(feedLink);
     }
 
     @Step("Кликнуть по кнопке «Личный Кабинет» в шапке")

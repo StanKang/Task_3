@@ -16,8 +16,6 @@ public class LoginPage extends BasePage {
     private final By emailInput = By.xpath("//label[text()='Email']/following-sibling::input");
     private final By passwordInput = By.xpath("//label[text()='Пароль']/following-sibling::input");
     private final By loginButton = By.xpath("//button[text()='Войти']");
-    private final By registerLink = By.xpath("//main//a[@href='/register']");
-    private final By forgotPasswordLink = By.xpath("//main//a[@href='/forgot-password']");
 
     public LoginPage(WebDriver driver) {
         super(driver);
@@ -55,15 +53,5 @@ public class LoginPage extends BasePage {
         setEmail(email);
         setPassword(password);
         clickLoginButton();
-    }
-
-    @Step("Кликнуть по ссылке «Зарегистрироваться»")
-    public void clickRegisterLink() {
-        click(registerLink);
-    }
-
-    @Step("Кликнуть по ссылке «Восстановить пароль»")
-    public void clickForgotPasswordLink() {
-        click(forgotPasswordLink);
     }
 }
